@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 16:59:50 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/06/01 17:28:43 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/06/02 13:31:13 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ void	print_error(int num, t_sl *sl)
 	{
 		free(sl->map_line);
 		ft_putstr_fd("Error\nMap is empty!\n", 2);
+	}
+	if (num == 7)
+	{
+		free(sl->map_line);
+		ft_putstr_fd("Error\nMap is bigger than own screen!\n", 2);
 	}
 	if (num == 4 || num == 5 || num == 6)
 		print_error2(num, sl);

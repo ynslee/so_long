@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 12:31:40 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/06/01 19:03:12 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/06/02 13:43:41 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,10 @@ void	steps_on_window(t_sl *sl)
 	char	*str;
 
 	mlx_put_image_to_window(sl->mlx, sl->window, sl->wall, 0 * 64, 0 * 64);
-	mlx_string_put(sl->mlx, sl->window, 0, 0, 0x0000FF00, "total steps:");
+	mlx_put_image_to_window(sl->mlx, sl->window, sl->wall, 1 * 64, 0 * 64);
+	mlx_string_put(sl->mlx, sl->window, 0, 0, 0x000000FF, "total steps:");
 	str = ft_itoa(sl->mv_count);
 	mlx_put_image_to_window(sl->mlx, sl->window, sl->wall, 2 * 64, 0 * 64);
-	mlx_string_put(sl->mlx, sl->window, 140, 0, 0x0000FF00, str);
+	mlx_string_put(sl->mlx, sl->window, 140, 0, 0x000000FF, str);
 	free(str);
 }

@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 15:26:55 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/06/01 16:58:31 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:51:16 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	validate_map_rectangular(t_sl *sl)
 			print_error(4, sl);
 		i++;
 	}
+	if (sl->h > 22 || sl->w > 40)
+		print_error(7, sl);
 	sl->x = sl->w;
 	sl->y = sl->h;
 }
@@ -94,9 +96,12 @@ void	validate_map_walls(t_sl *sl)
 	i = -1;
 	while (++i < sl->h)
 	{
-		if (sl->map[i][0] != '1' || sl->map[i][sl->w - 1] != '1')
+		if (sl->map[i][0] != '1' || sl->map[i][sl->h - 1] != '1')
+		{
+			ft_printf("here!3\n");
 			print_error(5, sl);
-		else if (i == 0 || i == sl->w - 1)
+		}
+		else if (i == 0 || i == sl->h - 1)
 		{
 			j = -1;
 			while (++j < sl->w)

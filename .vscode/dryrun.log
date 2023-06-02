@@ -1,0 +1,13 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/yoonslee/Desktop/so_long_github'
+cc -c -Wall -Wextra -Werror -g main.c error.c validate_map.c utils.c make_map.c movement.c later_delete.c -Iso_long.h
+cc -c -Wall -Wextra -Werror -g main.c error.c validate_map.c utils.c make_map.c movement.c later_delete.c -Iso_long.h
+cc -c -Wall -Wextra -Werror -g main.c error.c validate_map.c utils.c make_map.c movement.c later_delete.c -Iso_long.h
+cc -c -Wall -Wextra -Werror -g main.c error.c validate_map.c utils.c make_map.c movement.c later_delete.c -Iso_long.h
+cc -c -Wall -Wextra -Werror -g main.c error.c validate_map.c utils.c make_map.c movement.c later_delete.c -Iso_long.h
+cc -c -Wall -Wextra -Werror -g main.c error.c validate_map.c utils.c make_map.c movement.c later_delete.c -Iso_long.h
+cc -c -Wall -Wextra -Werror -g main.c error.c validate_map.c utils.c make_map.c movement.c later_delete.c -Iso_long.h
+make -C libft all
+cc -Wall -Wextra -Werror -g main.o error.o validate_map.o utils.o make_map.o movement.o later_delete.o -Iso_long.h ./libft/libft.a -lmlx -framework OpenGL -framework AppKit -o so_long 
+make: Leaving directory `/Users/yoonslee/Desktop/so_long_github'
+ 
